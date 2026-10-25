@@ -15,7 +15,6 @@ Clicks with a modifier key (<kbd>Cmd</kbd>, <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kb
 ## Compatibility
 
 - Desktop and mobile.
-- Plays along with the [Mermaid Zoom](https://github.com/xiaozhuang0433) plugin: diagrams you zoom inline with Mermaid Zoom are left alone, and its control buttons keep working.
 
 ## Installation
 

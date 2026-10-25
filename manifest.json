@@ -1,7 +1,7 @@
 {
   "id": "mermaid-autozoom",
   "name": "Mermaid Autozoom",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "minAppVersion": "1.5.0",
   "description": "Fits wide Mermaid diagrams to the page width and shows them at full size in an overlay on click.",
   "author": "Jiří Václavovič",

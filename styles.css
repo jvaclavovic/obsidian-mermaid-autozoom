@@ -1,8 +1,7 @@
 /* In notes: a diagram wider than the page shrinks to the page width.
-   max-width is deliberately not forced – smaller diagrams keep Mermaid's own inline max-width.
-   Skipped for diagrams zoomed by the Mermaid Zoom plugin. */
-.markdown-rendered .mermaid:not(.mermaid-zoom-scaled) > svg,
-.markdown-source-view .mermaid:not(.mermaid-zoom-scaled) > svg {
+   max-width is deliberately not forced – smaller diagrams keep Mermaid's own inline max-width. */
+.markdown-rendered .mermaid > svg,
+.markdown-source-view .mermaid > svg {
   max-width: 100%;
   height: auto;
   cursor: zoom-in;

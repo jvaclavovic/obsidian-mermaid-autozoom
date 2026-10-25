@@ -37,9 +37,9 @@ module.exports = class MermaidAutozoomPlugin extends Plugin {
     const t = e.target;
     if (!(t instanceof Element)) return null;
     if (t.closest(".mermaid-autozoom-overlay")) return null;   // already inside the overlay
-    if (t.closest("button, .clickable-icon, .edit-block-button, .mermaid-zoom-inline-controls")) return null;
+    if (t.closest("button, .clickable-icon, .edit-block-button")) return null;
     const box = t.closest(".mermaid");
-    if (!box || box.classList.contains("mermaid-zoom-scaled")) return null;
+    if (!box) return null;
     return box.querySelector(":scope > svg");
   }
 
