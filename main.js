@@ -51,6 +51,7 @@ module.exports = class MermaidAutozoomPlugin extends Plugin {
     const frame = overlay.createDiv({ cls: "mermaid-autozoom-frame" });
     const box = frame.createDiv({ cls: "mermaid" });
     const svg = sourceSvg.cloneNode(true);
+    svg.style.removeProperty("max-width");   // Mermaid's inline cap; the overlay shows the natural size
     box.appendChild(svg);
 
     const applyZoom = () => {
