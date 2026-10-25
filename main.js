@@ -68,6 +68,22 @@ module.exports = class MermaidAutozoomPlugin extends Plugin {
       if (e.key === "Escape") { e.preventDefault(); e.stopPropagation(); close(); }
     };
 
+    // pinch with two fingers = zoom (touch devices)
+    let pinch = null;
+    const dist = (t) => Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
+    overlay.addEventListener("touchstart", (e) => {
+      if (e.touches.length === 2) pinch = { d: dist(e.touches), z: zoom };
+    }, { passive: true });
+    overlay.addEventListener("touchmove", (e) => {
+      if (!pinch || e.touches.length !== 2) return;
+      e.preventDefault();
+      zoom = Math.min(8, Math.max(0.1, pinch.z * dist(e.touches) / pinch.d));
+      applyZoom();
+    }, { passive: false });
+    overlay.addEventListener("touchend", (e) => {
+      if (e.touches.length < 2) pinch = null;
+    }, { passive: true });
+
     overlay.addEventListener("click", close);
     overlay.addEventListener("wheel", (e) => {
       if (!(e.ctrlKey || e.metaKey)) return;     // plain wheel scrolls a large diagram

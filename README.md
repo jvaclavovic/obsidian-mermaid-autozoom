@@ -5,8 +5,8 @@ An [Obsidian](https://obsidian.md) plugin that keeps wide Mermaid diagrams reada
 - **Fits to the page** – a Mermaid diagram wider than the note shrinks to the page width. Smaller diagrams keep their natural size (they are never enlarged).
 - **Click to view at 100 %** – click a diagram to open it at its natural size in an overlay over the current window.
   - Large diagrams can be scrolled with the mouse wheel / trackpad.
-  - <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + wheel zooms in and out.
-  - Click anywhere or press <kbd>Esc</kbd> to close.
+  - <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + wheel zooms in and out; on touch devices pinch with two fingers.
+  - Click / tap anywhere or press <kbd>Esc</kbd> to close.
 
 Works in Reading view and Live Preview. In Live Preview, clicking the diagram opens the overlay instead of switching the block to source editing – use the code block's edit button (`</>`) to edit the diagram source.
 
@@ -14,7 +14,7 @@ Clicks with a modifier key (<kbd>Cmd</kbd>, <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kb
 
 ## Compatibility
 
-- Desktop only.
+- Desktop and mobile.
 - Plays along with the [Mermaid Zoom](https://github.com/xiaozhuang0433) plugin: diagrams you zoom inline with Mermaid Zoom are left alone, and its control buttons keep working.
 
 ## Installation

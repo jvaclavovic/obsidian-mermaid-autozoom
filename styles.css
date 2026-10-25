@@ -20,6 +20,11 @@
   cursor: zoom-out;
 }
 
+.is-mobile .mermaid-autozoom-overlay {
+  padding: var(--size-4-2);
+  touch-action: pan-x pan-y;   /* one finger scrolls; two-finger pinch is handled by the plugin */
+}
+
 /* margin: auto centres the frame but keeps a larger-than-window diagram fully scrollable */
 .mermaid-autozoom-frame {
   margin: auto;
