@@ -1,0 +1,36 @@
+/* In notes: a diagram wider than the page shrinks to the page width.
+   max-width without !important on purpose – smaller diagrams keep Mermaid's own inline max-width.
+   Skipped for diagrams zoomed by the Mermaid Zoom plugin. */
+.markdown-rendered .mermaid:not(.mermaid-zoom-scaled) > svg,
+.markdown-source-view .mermaid:not(.mermaid-zoom-scaled) > svg {
+  max-width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+
+/* Overlay with the diagram at 100 % */
+.mermaid-autozoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--layer-modal);
+  display: flex;
+  overflow: auto;
+  padding: var(--size-4-8);
+  background-color: color-mix(in oklch, black 75%, transparent);
+  cursor: zoom-out;
+}
+
+/* margin: auto centres the frame but keeps a larger-than-window diagram fully scrollable */
+.mermaid-autozoom-frame {
+  margin: auto;
+  padding: var(--size-4-4);
+  background-color: var(--background-primary);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-l);
+}
+
+.mermaid-autozoom-frame .mermaid > svg {
+  display: block;
+  max-width: none !important;
+  height: auto;
+}
