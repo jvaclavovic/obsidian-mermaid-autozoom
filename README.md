@@ -20,7 +20,8 @@ Clicks with a modifier key (<kbd>Cmd</kbd>, <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kb
 
 ### From Community plugins
 
-Not published yet.
+1. Open **Settings → Community plugins → Browse**.
+2. Search for **Mermaid Autozoom**, select **Install**, then **Enable**.
 
 ### Manually
 
